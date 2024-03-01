@@ -35,73 +35,92 @@
 
         <div id="content">
             
-<script>
-    function submitAnswer() {
-        const answer = document.getElementById("answer").value;
+            <script>
+                function submitAnswer() {
+                    const answer = document.getElementById("answer").value;
+                    
+                    const hash = md5(answer.toLowerCase());
+                    
+                    const bhash = btoa(hash);
+                    const l = ['MWFmYTM0YTdmOTg0ZWVhYmRiYjBhN2Q0OTQxMzJlZTU=']
+                    for (let ii = 0; ii < l.length; ii++) {
+                        const val = l[ii];
+                        if (val == bhash) {
+                            window.location.href = hash + '.html';
+                            return
+                        }
+                    }
+                    $('#response').text('Sorry, ' + answer + ' is not correct.')
+                }
+            </script>
+            
+            <div>
+                <h1>
+                    <br>
+                    Here are some Python coding challenges to test you! 
+            
+                </h1>
+                <h2>
+                    <br>
+                    1. Round the block
+                </h2>
+            
+                <p>
+                    Add some code at the end of this programme to get the turtle called t to 
+                    go round the block and end up where it started. Use as few lines of code as you possibly can!
+                </p>
+            
+                <iframe src="https://trinket.io/embed/python/3ac5dab9f9" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <p>If this trinket doesn't display properly you can go to the trinket page <a href="https://trinket.io/python/3ac5dab9f9">here</a>.</p>
+            </div>
+            
+            <div>
+               <h2>
+                    <br>
+                    2. Sort me out
+                </h2>
+            
+                <p>
+                    Here are eight variables each containing a text string. Print them out in alphabetical order to find something nice!
+                </p>
+            
+                <iframe src="https://trinket.io/embed/python/8f8e6b24a1" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <p>If this trinket doesn't display properly you can go to the trinket page <a href="https://trinket.io/python/8f8e6b24a1">here</a>.</p>
+            </div>
+                    
+            <div>
+               <h2>
+                    <br>
+                    3. What's in a list?
+                </h2>
+            
+                <p>
+                    This challenge is all Python lists.
+                    <br>
+                    A Python list consists of a series of items, separated by commas, inside square brackets <q>[]</q>.
+                    Lists are very closely associated with Python <q>for</q> loops and some of these challenges will also include writing loops.
+                    <br>
+                    There are three lists - you have to find different ways of printing out all the contents.
+                </p>
+            
+                <iframe src="https://trinket.io/embed/python/bb0d95b44c" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <p>If this trinket doesn't display properly you can go to the trinket page <a href="https://trinket.io/python/bb0d95b44c">here</a>.</p>
+            </div>
         
-        const hash = md5(answer.toLowerCase());
-        
-        const bhash = btoa(hash);
-        const l = ['MWFmYTM0YTdmOTg0ZWVhYmRiYjBhN2Q0OTQxMzJlZTU=']
-        for (let ii = 0; ii < l.length; ii++) {
-            const val = l[ii];
-            if (val == bhash) {
-                window.location.href = hash + '.html';
-                return
-            }
-        }
-        $('#response').text('Sorry, ' + answer + ' is not correct.')
-    }
-</script>
-
-<div>
-    <h1>
-        <br>
-        Here are some Python coding challenges to test you! 
-
-    </h1>
-    <h2>
-        <br>
-        1. Round the block
-    </h2>
-
-    <p>
-        Add some code at the end of this programme to get the turtle called t to 
-        go round the block and end up where it started. Use as few lines of code as you possibly can!
-    </p>
-
-    <iframe src="https://trinket.io/embed/python/3ac5dab9f9" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-    <p>If this trinket doesn't display properly you can go to the trinket page <a href="https://trinket.io/python/3ac5dab9f9">here</a>.</p>
-</div>
-
-<div>
-   <h2>
-        <br>
-        2. Sort me out
-    </h2>
-
-    <p>
-        Here are eight variables each containing a text string. Print them out in alphabetical order to find something nice!
-    </p>
-
-    <iframe src="https://trinket.io/embed/python/8f8e6b24a1" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-    <p>If this trinket doesn't display properly you can go to the trinket page <a href="https://trinket.io/python/8f8e6b24a1">here</a>.</p>
-</div>
-        
-<div>
-   <h2>
-        <br>
-        3. It all adds up
-    </h2>
-
-    <p>
-        The code contains a list of more than 1000 numbers. All you have to do is 
-        write code to add them all up and display the total!
-    </p>
-
-    <iframe src="https://trinket.io/embed/python/998aed52f3" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-    <p>If this trinket doesn't display properly you can go to the trinket page <a href="https://trinket.io/python/998aed52f3">here</a>.</p>
-</div>
+            <div>
+               <h2>
+                    <br>
+                    4. It all adds up
+                </h2>
+            
+                <p>
+                    The code contains a list of more than 1000 numbers. All you have to do is 
+                    write code to add them all up and display the total!
+                </p>
+            
+                <iframe src="https://trinket.io/embed/python/998aed52f3" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <p>If this trinket doesn't display properly you can go to the trinket page <a href="https://trinket.io/python/998aed52f3">here</a>.</p>
+            </div>
         
         </div>
     </div>
