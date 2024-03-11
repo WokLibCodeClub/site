@@ -31,7 +31,11 @@ https://woklibcodeclub.github.io/site/coding_challenges/index.html
         counter-reset: listCounter;
     }
     h1   {color: blue;}
-    .continuous-list li::before 
+    ol {
+        list-style-type: none;
+        /* Remove default numbering */
+        }
+.continuous-list li::before 
         {  
           content: counter(listCounter) ". ";  
           counter-increment: listCounter;
