@@ -258,6 +258,49 @@ https://woklibcodeclub.github.io/site/coding_challenges/index.html
                 <p>If this trinket doesn't display properly you can go to the trinket page <a href="https://trinket.io/python/998aed52f3">here</a>.</p>
             </div>
         
+            <div>
+               <h2>
+                    <br>
+                    <ol class="continuous-list">
+                      <li>2, 4, 6, 8, Don't we love to tesselate!</li>
+                    </ol> 
+                </h2>
+            
+                <p>
+                    Can you programme the turtle to make this picture:
+                    <br><br>
+                    <img src="tesselate1.png" alt="Arrow tesselation" class="inline" width="200" height="200"/>
+                    <br><br>
+                    There are instructions in the comments in the trinket below but some of the instructions are repeated here, with example pictures.
+                    <br><br>
+                    When you run the code you will see a green arrow pointing to the right. The whole arrow is 100 pixels long with the triangular part 
+                    50 pixels from side to side, and 60 pixels high, while the rectangular stem is 50 pixels long from side to side and 30 pixels high.
+                    <br><br>
+                    The first instruction is to copy the four lines of code 
+                    which are highlighted, and paste these in above the line which says <code>screen.update()</code>. In the <i>copied</i> code change 
+                    the turtle's fill colour to <code>'red'</code> and put in a different heading until you get a green arrow and a red arrow point to 
+                    point like this:
+                    <br><br>
+                    <img src="tesselate2.png" alt="Arrow tesselation" class="inline" width="200" height="200"/>
+                    <br><br>
+                    Both arrows have their points at coordinates (x,y) and you will see that in the code x and y are both set to 0. But now you have to 
+                    adjust the coordinates for the red arrow so that the bottom sloping edge of the red arrow lines up exactly with the top sloping edge 
+                    of the green arrow, like this:
+                    <br><br>
+                    <img src="tesselate3.png" alt="Arrow tesselation" class="inline" width="200" height="200"/>
+                    <br><br>
+                    You can do this by changing the expressions in the goto() instruction to <code>a.goto(x-?,y+?)</code> but you need to work out
+                    what numbers to put in in place of the question marks. You can check you have the right numbers by changing the values
+                    of <code>x</code> and <code>y</code> near the top of the code, and check that the two arrows move together to whatever
+                    location you choose.
+                    <br><br>
+                    
+                </p>
+            
+                <iframe src="https://trinket.io/embed/python/89445058a2" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <p>If this trinket doesn't display properly you can go to the trinket page <a href="https://trinket.io/python/89445058a2">here</a>.</p>
+            </div>
+
         </div>
     </div>
 </body>
