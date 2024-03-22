@@ -46,9 +46,10 @@ https://woklibcodeclub.github.io/site/coding_challenges/index.html
 </style>
 
 <style>
-      .hor-block {
+      span.hor-block {
         display: inline-block;
         padding: 5px;
+        width: 200px;
         vertical-align: middle;
     }
 </style>
@@ -320,11 +321,13 @@ https://woklibcodeclub.github.io/site/coding_challenges/index.html
                     more than it was before. Then add a third function call with the <code>x</code> coordinate 100 more again. You should 
                     end up with a picture looking similar to this:
                 </p>
-                <div class='hor-block'>
-                    <img src="tesselate4.png" width="200" height="200"/>
-                </div>
-                <div class='hor-block'>
-                    (In fact your screen will look exactly like this if you <br>have your first function call at coordinates (0, 0).)
+                <div height: 200px>
+                    <span class='hor-block'>
+                        <img src="tesselate4.png" width="200" height="200"/>
+                    </span>
+                    <span class='hor-block'>
+                        (In fact your screen will look exactly like this if you have your first function call at coordinates (0, 0).)
+                    </span>
                 </div>
                 <p>
                     What you need now is to set the starting x coordinate to a position at the left edge of the screen, and have it increase in jumps of 
