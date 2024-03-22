@@ -281,13 +281,13 @@ https://woklibcodeclub.github.io/site/coding_challenges/index.html
                     the turtle's fill colour to <code>'red'</code> and put in a different heading until you get a green arrow and a red arrow point to 
                     point like this:
                     <br><br>
-                    <img src="tesselate2.png" alt="Arrow tesselation" class="inline" width="200" height="200"/>
+                    <img src="tesselate2.png" alt="Head-to-head arrows" class="inline" width="200" height="200"/>
                     <br><br>
                     Both arrows have their points at coordinates (x, y) and you will see that in the code x and y are both set to 0. But now you have to 
                     adjust the coordinates for the red arrow so that the bottom sloping edge of the red arrow lines up exactly with the top sloping edge 
                     of the green arrow, like this:
                     <br><br>
-                    <img src="tesselate3.png" alt="Arrow tesselation" class="inline" width="200" height="200"/>
+                    <img src="tesselate3.png" alt="Tesselated arrows" class="inline" width="200" height="200"/>
                     <br><br>
                     You can do this by changing the goto() instruction for the red arrow to <code>a.goto(x - ?, y + ?)</code> but you need to work out
                     what numbers to put in in place of the question marks. You can check you have the right numbers by changing the values
@@ -301,6 +301,21 @@ https://woklibcodeclub.github.io/site/coding_challenges/index.html
                     <br>
                     above the line which says <code>a.fillcolor('lightgreen')</code> and make sure the nine lines which are going inside the function
                     are <i>indented</i>.
+                    <br><br>
+                    Just having a function won't do anything - we need to <i>call</i> the function. At the end of the code put the line
+                    <br>
+                    <code>tile(  ,  )</code>
+                    <br>
+                    with two numbers inside the brackets which are the <code>x</code> and <code>y</code> coordinates of the point where you 
+                    want to draw the arrows.
+                    <br><br>
+                    Now call the function again (add another line after the last one) but this time with the <code>x</code> coordinate 100 
+                    more than it was before. Then add a third function call with the <code>x</code> coordinate 100 more again. You should 
+                    end up with a picture looking similar to this:
+                    <br><br>
+                    <img src="tesselate4.png" alt="Multiple tesselations" class="inline" width="200" height="200"/>
+                    <br><br>
+                    
                 </p>
             
                 <iframe src="https://trinket.io/embed/python/89445058a2" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
