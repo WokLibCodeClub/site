@@ -50,9 +50,13 @@
         const hash = md5(answer.toLowerCase());
         
         const bhash = btoa(hash);
+        // l is a list with only one (text) item in it
         const l = ['YTFkMGM2ZTgzZjAyNzMyN2Q4NDYxMDYzZjRhYzU4YTY=']
+        // the loop only runs once if there is only one item in l
         for (let ii = 0; ii < l.length; ii++) {
             const val = l[ii];
+            /* compare the single item in l with the result of taking
+            the submitted answer (converted to lower case) and running md5 followed by btoa */
             if (val == bhash) {
                 window.location.href = hash + '.html';
                 return
