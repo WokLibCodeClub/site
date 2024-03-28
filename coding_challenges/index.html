@@ -418,7 +418,7 @@ https://woklibcodeclub.github.io/site/coding_challenges/index.html
                     <br><br>
                     If you run the code it will draw the turtle showing the <code>'diamond'</code> shape, with fill colour 'white' at coordinates (0,0).
                     <br><br>
-                    <h3>Stage 1</h3>
+                    <h4>Stage 1</h4>
                     <br>                
                     The first instruction is to copy the three lines of code highlighted by the comment, and paste these three lines <i>twice</i>.
                     In the first three pasted lines you will change the turtle shape to <code>'left_rhombus'</code> and the turtle fill colour to 
@@ -437,82 +437,29 @@ https://woklibcodeclub.github.io/site/coding_challenges/index.html
                     and turn these into a <b>function</b>. Start the function with the code:
                     <br>
                     <code>def draw_three_shapes(x,y):</code>
-                    <br>
                     and change the coordinates in the <code>t.goto(0,0)</code> line to <code>t.goto(x,y)</code>. Don't forget to <b><i>indent</i></b>
                     all the lines which are inside the function.
                     <br><br>
                     In the section 'main code' <b><i>call</i></b> your function with the coordinates (0,0) and check you still see the same display.
                     <br><br>
-                    <h3>Stage 2</h3>
-                    <br>                
+                    <h4>Stage 2</h4>
                     Now you need to put your code to call the function inside a <code>for</code> loop so it repeats with a changing <code>x</code> 
                     coordinate. Use a <code>range()</code> function as you did before, but you will have to work out the three numbers to put in
                     the brackets. Try to get your code to draw a picture like this:
                     <br><br>
                     <img src="tesselate12.png" alt="Shapes acrosss screen" class="inline" width="200" height="200"/>
                     <br><br>
-                    <h3>Stage 3</h3>
-                    <br>                
+                    <h4>Stage 3</h4>
                     Now make a <code>for</code> loop for the <code>y</code> coordinate, and put the loop for the <code>x</code> coordinate <i>inside</i> 
                     this loop. Use <code>range()</code> with three numbers in the brackets and try to get the screen looking like this:
                     <br><br>
                     <img src="tesselate13.png" alt="Shapes acrosss/up screen" class="inline" width="200" height="200"/>
                     <br><br>
-                    <h3>Stage 4</h3>
-                    <br>                
-                    As you can see there are a lot of holes in the pattern. 
-                    Both arrows have their points at coordinates (x, y) and you will see that in the code x and y are both set to 0. But now you have to 
-                    adjust the coordinates for the red arrow so that the bottom sloping edge of the red arrow lines up exactly with the top sloping edge 
-                    of the green arrow, like this:
-                    <br><br>
-                    <img src="tesselate3.png" alt="Tesselated arrows" class="inline" width="200" height="200"/>
-                    <br><br>
-                    You can do this by changing the goto() instruction for the red arrow to <code>a.goto(x - ?, y + ?)</code> but you need to work out
-                    what numbers to put in in place of the question marks. You can check you have the right numbers by changing the values
-                    of <code>x</code> and <code>y</code> near the top of the code, and check that the two arrows move together to whatever
-                    location you choose.
-                    <br><br>
-                    Now we've got code to draw two joined arrow shapes we need to put all this code (nine lines in all) inside a <i>function</i>.
-                    Start your function with this line:
-                    <br>
-                    <code>def tile(x, y):</code>
-                    <br>
-                    above the line which says <code>a.fillcolor('lightgreen')</code> and make sure the nine lines which are going inside the function
-                    are <i>indented</i>.
-                    <br><br>
-                    Just having a function won't do anything - we need to <i>call</i> the function. At the end of the code put the line
-                    <br>
-                    <code>tile(  ,  )</code>
-                    <br>
-                    with two numbers inside the brackets which are the <code>x</code> and <code>y</code> coordinates of the point where you 
-                    want to draw the arrows.
-                    <br><br>
-                    Now call the function again (add another line after the last one) but this time with the <code>x</code> coordinate 100 
-                    more than it was before. Then add a third function call with the <code>x</code> coordinate 100 more again. You should 
-                    end up with a picture looking similar to this:
+                    <h4>Stage 4</h4>
+                    As you can see there are a lot of holes in the pattern. To fill the holes we need to repeat the <i>nested</i> <code>for</code> loops
+                    but with slightly different starting coordinates. Look carefully at the diagram with the dimensions (see above) and work out how to 
+                    change the starting positions in the two <code>range()</code> functions to fill in the holes.
                 </p>
-                <div height: 200px>
-                    <span class='hor-block'>
-                        <img src="tesselate4.png" width="200" height="200"/>
-                    </span>
-                    <span class='hor-block'>
-                        (In fact your screen will look exactly like this if you have your first function call at coordinates (0, 0).)
-                    </span>
-                </div>
-                <p>
-                    What you need now is to set the starting x coordinate to a position at the left edge of the screen, and have it increase in jumps of 
-                    100 until it goes beyond the right edge of the screen, calling the <code>tile(x,y)</code> function for each jump. You can do 
-                    this using a Python <code>for</code> loop with a <code>range()</code> function where you put <i>three</i> numbers inside
-                    the brackets.
-                    <br><br>
-                    Once you have a <code>for</code> loop which draws the double-arrow pattern all across the screen you then need <i>another</i>
-                    <code>for</code> loop to do the same thing for the <code>y</code> coordinate (again using the <code>range()</code> function
-                    with <i>three</i> numbers inside the brackets, except the size of the jump will be different).
-                    <br><br>
-                    The clever trick is the put the x-coordinate <code>for</code> loop <i><b>inside</b></i> the y-coordinate <code>for</code> loop.
-                    This will give the arrow pattern filling the whole screen!
-                </p>
-            
                 <iframe src="https://trinket.io/embed/python/6208104e45" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 <p>If this trinket doesn't display properly you can go to the trinket page <a href="https://trinket.io/python/6208104e45">here</a>.</p>
             </div>
