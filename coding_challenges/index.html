@@ -418,8 +418,7 @@ https://woklibcodeclub.github.io/site/coding_challenges/index.html
                     <br><br>
                     If you run the code it will draw the turtle showing the <code>'diamond'</code> shape, with fill colour 'white' at coordinates (0,0).
                     <br><br>
-                    <h4>Stage 1</h4>
-                    <br>                
+                    <h4><u>Stage 1</u></h4>
                     The first instruction is to copy the three lines of code highlighted by the comment, and paste these three lines <i>twice</i>.
                     In the first three pasted lines you will change the turtle shape to <code>'left_rhombus'</code> and the turtle fill colour to 
                     <code>'lightgrey'</code>, and in the second three pasted lines you will change the turtle shape to <code>'right_rhombus'</code> and 
@@ -437,28 +436,34 @@ https://woklibcodeclub.github.io/site/coding_challenges/index.html
                     and turn these into a <b>function</b>. Start the function with the code:
                     <br>
                     <code>def draw_three_shapes(x,y):</code>
+                    <br>
                     and change the coordinates in the <code>t.goto(0,0)</code> line to <code>t.goto(x,y)</code>. Don't forget to <b><i>indent</i></b>
                     all the lines which are inside the function.
                     <br><br>
                     In the section 'main code' <b><i>call</i></b> your function with the coordinates (0,0) and check you still see the same display.
                     <br><br>
-                    <h4>Stage 2</h4>
+                    <h4><u>Stage 2</u></h4>
                     Now you need to put your code to call the function inside a <code>for</code> loop so it repeats with a changing <code>x</code> 
                     coordinate. Use a <code>range()</code> function as you did before, but you will have to work out the three numbers to put in
                     the brackets. Try to get your code to draw a picture like this:
                     <br><br>
                     <img src="tesselate12.png" alt="Shapes acrosss screen" class="inline" width="200" height="200"/>
                     <br><br>
-                    <h4>Stage 3</h4>
+                    <h4><u>Stage 3</u></h4>
                     Now make a <code>for</code> loop for the <code>y</code> coordinate, and put the loop for the <code>x</code> coordinate <i>inside</i> 
                     this loop. Use <code>range()</code> with three numbers in the brackets and try to get the screen looking like this:
                     <br><br>
                     <img src="tesselate13.png" alt="Shapes acrosss/up screen" class="inline" width="200" height="200"/>
                     <br><br>
-                    <h4>Stage 4</h4>
-                    As you can see there are a lot of holes in the pattern. To fill the holes we need to repeat the <i>nested</i> <code>for</code> loops
-                    but with slightly different starting coordinates. Look carefully at the diagram with the dimensions (see above) and work out how to 
-                    change the starting positions in the two <code>range()</code> functions to fill in the holes.
+                    <h4><u>Stage 4</u></h4>
+                    As you can see there are a lot of holes in the pattern. To fill the holes we need to <b>repeat</b> the <i>nested</i> <code>for</code> loops
+                    but with slightly different starting coordinates. 
+                    <br><br>
+                    Copy your nested loops and paste them at the end of your code. Now, look carefully at the diagram with the dimensions (see above) and 
+                    work out how you can change the starting values in the two <code>range()</code> functions in your copied code, so that it will draw 
+                    the pattern in between the first pattern, to fill in the holes. Hopefully you will now see the screen filled with 3D boxes, just 
+                    like the diagram at the top of this challenge!
+                    <br>
                 </p>
                 <iframe src="https://trinket.io/embed/python/6208104e45" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 <p>If this trinket doesn't display properly you can go to the trinket page <a href="https://trinket.io/python/6208104e45">here</a>.</p>
