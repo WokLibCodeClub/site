@@ -50,7 +50,9 @@
         const hash = md5(answer.toLowerCase());
         
         const bhash = btoa(hash);
+        // There are two valid answers, so two btoa codes are computed and these are both put in the list l
         const l = ['MGFiYWMwZDA1MmFmNGFkOGEzY2NmNzEwNWZmYjRjODE=', 'MTE0ZDQzZjYzYTIwZTI3OTZmOGZmNzBjODkzM2QyNmI=']
+        // loop will run twice to check each valid answer against the btoa codes
         for (let ii = 0; ii < l.length; ii++) {
             const val = l[ii];
             if (val == bhash) {
