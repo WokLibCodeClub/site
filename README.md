@@ -11,3 +11,5 @@ content has been put in a directory inside the `django_site` root in a directory
 environment variable called `DISTILL_DIR` to point to the actual location of the distillation.
 
 To run the Makefile (on linux), just move to the directory of it and type `make`.
+
+To look at the challenges online go to [woklibcodeclub.github.io/site/xmas_challenge_2023/](https://woklibcodeclub.github.io/site/xmas_challenge_2023/)
